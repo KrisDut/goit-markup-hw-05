@@ -25,6 +25,7 @@ ul {
 .nav {
   display: flex;
   width: 1200px;
+  height: 80px;
   align-items: center;
   background-color: #ffffff;
   padding-left: 0px;
@@ -32,6 +33,7 @@ ul {
 
 .webstudio-nav {
   display: flex;
+  align-items: stretch;
   align-content: center;
   height: 31px;
   font-family: Raleway;
@@ -53,6 +55,7 @@ ul {
 
 .agencja-nav {
   display: flex;
+  align-items: stretch;
   align-content: center;
   font-family: Roboto;
   font-style: normal;
@@ -64,10 +67,12 @@ ul {
   color: #212121;
   cursor: pointer;
   margin-right: 46px;
+  transition-property: color;
 }
 
 .portfolio-nav {
   display: flex;
+  align-items: stretch;
   align-content: center;
   font-family: Roboto;
   font-style: normal;
@@ -83,6 +88,7 @@ ul {
 
 .kontakt-nav {
   display: flex;
+  align-items: stretch;
   align-content: center;
   font-family: Roboto;
   font-style: normal;
@@ -102,6 +108,7 @@ ul {
 
 .mail-nav {
   display: flex;
+  align-items: stretch;
   align-content: center;
   font-family: Roboto;
   font-style: normal;
@@ -128,6 +135,7 @@ ul {
 
 .tel-nav {
   display: flex;
+  align-items: stretch;
   align-content: center;
   font-family: Roboto;
   font-style: normal;
@@ -147,8 +155,6 @@ ul {
 .mail-nav:hover,
 .tel-nav:hover {
   color: #2196f3;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .section-1-index {
@@ -170,7 +176,7 @@ ul {
   height: 100%;
   width: 100%;
   background-color: rgba(47, 48, 58, 0.4);
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -191,16 +197,63 @@ ul {
 }
 
 .button-index {
+  display: flex;
   width: 200px;
   height: 50px;
   background: #2196f3;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+}
+
+.backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.modal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 528px;
+  height: 581px;
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.close-btn {
+  position: absolute;
+  display: flex;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.x {
+  font-size: 30px;
 }
 
 .zamow {
-  width: 117px;
-
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;

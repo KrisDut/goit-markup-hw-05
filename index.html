@@ -26,7 +26,7 @@
               >Web<span id="studio-nav">Studio</span></a
             >
           </li>
-          <li><a href="" class="agencja-nav">Agencja</a></li>
+          <li><a href="index.html" class="agencja-nav">Agencja</a></li>
           <li><a href="portfolio.html" class="portfolio-nav">Portfolio</a></li>
           <li><a href="" class="kontakt-nav">Kontakt</a></li>
 
@@ -49,7 +49,7 @@
       <section class="section-1-index">
         <div class="bg">
           <h1 class="h1-index">EFEKTYWNE ROZWIĄZANIA DLA WASZEGO BIZNESU</h1>
-          <button class="button-index">
+          <button class="button-index" data-modal-open>
             <a class="zamow">Zamów Usługę</a>
           </button>
         </div>
@@ -562,6 +562,13 @@
         </div>
       </div>
     </footer>
+
+<div class="backdrop is-hidden" data-modal>
+  <div class="modal">
+    <button type="button" class="close-btn" data-modal-close><div class="x">×</div></button>
+  </div>
+</div>
+
     <script src="./js/modal.js"></script>
   </body>
 </html>
