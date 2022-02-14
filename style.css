@@ -53,6 +53,24 @@ ul {
   color: #212121;
 }
 
+.agencja-nav-agencja {
+  display: flex;
+  align-items: stretch;
+  align-content: center;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 114%;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: #2196f3;
+  cursor: pointer;
+  margin-right: 46px;
+  transition-property: color;
+  margin-top: 36px;
+}
+
 .agencja-nav {
   display: flex;
   align-items: stretch;
@@ -70,6 +88,10 @@ ul {
   transition-property: color;
 }
 
+.icon-agencja-hover {
+  margin-top: 28px;
+}
+
 .portfolio-nav {
   display: flex;
   align-items: stretch;
@@ -84,6 +106,23 @@ ul {
   color: #212121;
   cursor: pointer;
   margin-right: 46px;
+}
+
+.portfolio-nav-portfolio {
+  display: flex;
+  align-items: stretch;
+  align-content: center;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 114%;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: #2196f3;
+  cursor: pointer;
+  margin-right: 46px;
+  margin-top: 36px;
 }
 
 .kontakt-nav {
@@ -739,6 +778,57 @@ figure {
   background: #ffffff;
   border: 1px solid #eeeeee;
   margin-bottom: 8px;
+  z-index: 3;
+}
+
+.animation-bottom {
+  position: relative;
+}
+
+.animation-image {
+  display: flex;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  display: flex;
+
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 294px;
+  width: 370px;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: rgba(33, 150, 243, 0.9);
+
+  z-index: 1;
+}
+
+.fc {
+  display: flex;
+  z-index: 999;
+}
+
+.image-portfolio:hover .overlay {
+  opacity: 1;
+}
+
+.overlay-text {
+  display: flex;
+  width: 370px;
+  height: 294px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 156%;
+  /* or 156% */
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  margin: 49px 45px 49px 24px;
 }
 
 a {
@@ -757,6 +847,7 @@ a {
   margin-top: 20px;
   letter-spacing: 0.06em;
   color: #212121;
+  z-index: 1;
 }
 
 .funder {
@@ -770,6 +861,7 @@ a {
   margin-left: 20px;
   letter-spacing: 0.03em;
   color: #757575;
+  z-index: 2;
 }
 
 .image-portfolio:hover,

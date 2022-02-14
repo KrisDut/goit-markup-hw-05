@@ -27,7 +27,11 @@
             >
           </li>
           <li><a href="index.html" class="agencja-nav">Agencja</a></li>
-          <li><a href="portfolio.html" class="portfolio-nav">Portfolio</a></li>
+          <li><a href="portfolio.html" class="portfolio-nav-portfolio">Portfolio</a>
+          <svg class="icon-agencja-hover" fill="currentColor" width="58px" height="4px">
+                <use href="./images/icons.svg#icon-portfolio-hover"></use>
+                </svg>
+              </li>
           <li><a href="" class="kontakt-nav">Kontakt</a></li>
 
           <li>
@@ -58,12 +62,18 @@
         <ul class="list-portfolio">
           <li><a href="#">
             <figure class="image-portfolio">
-              <img
+              <div class="animation-bottom"><img 
                 src="images/laptop.jpg"
                 alt="laptop"
                 width="370"
                 height="294"
+                class="animation-image"
               />
+            <div class="overlay">
+              <div class="overlay-text">Technocrack jest popularną platformą wykorzystywaną do rozpowszechniania koronawirusa. 
+                Firmy wykorzystują tę platformę do celów szpiegowskich i ataków na niezabezpieczone serwery konkurencji</div>
+            </div>
+            </div>
               <figcaption class="fc">
                 <p class="fcaption">Technocrack</p>
                 <p class="funder">Strona internetowa</p>
