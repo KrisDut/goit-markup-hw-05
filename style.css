@@ -88,7 +88,8 @@ ul {
   transition-property: color;
 }
 
-.icon-agencja-hover {
+.icon-agencja-hover,
+.icon-portfolio-hover {
   margin-top: 28px;
 }
 
@@ -778,48 +779,21 @@ figure {
   background: #ffffff;
   border: 1px solid #eeeeee;
   margin-bottom: 8px;
-  z-index: 3;
 }
 
-.animation-bottom {
+.box-image-portfolio {
   position: relative;
+  overflow: hidden;
 }
 
-.animation-image {
-  display: flex;
-  width: 100%;
-  height: auto;
-}
-
-.overlay {
-  display: flex;
-
+.overlay-portfolio {
+  position: absolute;
   top: 0;
-  bottom: 0;
   left: 0;
-  right: 0;
-  height: 294px;
-  width: 370px;
-  opacity: 0;
-  transition: 0.5s ease;
-  background-color: rgba(33, 150, 243, 0.9);
-
-  z-index: 1;
-}
-
-.fc {
-  display: flex;
-  z-index: 999;
-}
-
-.image-portfolio:hover .overlay {
-  opacity: 1;
-}
-
-.overlay-text {
-  display: flex;
-  width: 370px;
-  height: 294px;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+  transition: transform 250ms ease;
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
@@ -828,7 +802,15 @@ figure {
   /* or 156% */
   letter-spacing: 0.03em;
   color: #ffffff;
-  margin: 49px 45px 49px 24px;
+  background: rgba(33, 150, 243, 0.9);
+}
+
+.image-portfolio:hover .overlay-portfolio {
+  transform: translate(0);
+}
+
+.overlay-text {
+  margin: 49px 45px 49px 25px;
 }
 
 a {
