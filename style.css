@@ -203,7 +203,7 @@ ul {
   max-width: 1600px;
   background-image: url("./images/background.png");
   margin: 0 auto;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   display: flex;
@@ -260,13 +260,26 @@ ul {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+
   width: 528px;
   height: 581px;
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  animation: animateModal 1000ms 1000ms;
+  transform-origin: center center;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes animateModal {
+  0% {
+    transform: translate(-50%, -50%) scale(0) rotate3d(0, 0, 1, 0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1) rotate3d(0, 0, 1, 720deg);
+  }
 }
 
 .close-btn {
